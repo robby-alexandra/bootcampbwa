@@ -30,4 +30,11 @@ class TypeUser extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function detail_user()
+    {
+        // link lokasi/path , pilih FK'a dan pilih primary key
+        // relasi dengan App/Models/ManagementAccess/DetailUser
+        return $this->belongsTo('App/Models/MasterData/TypeUser', 'type_user_id', 'id');
+    }
 }

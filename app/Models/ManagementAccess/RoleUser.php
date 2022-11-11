@@ -31,4 +31,9 @@ class RoleUser extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function user()
+    {
+        return $this->belongsTo('App/Models/User', 'user_id', 'id');
+    }
 }

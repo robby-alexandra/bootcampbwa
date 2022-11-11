@@ -35,4 +35,17 @@ class DetailUser extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    // HasMany ( cek database relation )
+    public function detail_user()
+    {
+        // detial_user a/ databasenya tujuan one to many'a
+        // link lokasi , dan pilih FK'a
+        // kemudian open model relasinya untuk menambahkan belongsTo
+        return $this->hasMany('App/Models/ManagementAccess/DetailUser', 'type_user_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App/Models/User', 'user_id', 'id');
+    }
 }

@@ -31,4 +31,12 @@ class Specialist extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function doctor()
+    {
+        // doctor a/ untuk nama model doctor
+        // link lokasi , dan pilih FK'a
+        // kemudian open model relasinya untuk menambahkan belongsTo
+        return $this->hasMany('App/Models/Operational/Doctor', 'specialist_id');
+    }
 }

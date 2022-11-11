@@ -30,4 +30,11 @@ class Consultation extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function appointment()
+    {
+        // link lokasi/path , pilih FK'a dan pilih primary key
+        // relasi dengan App/Models/ManagementAccess/DetailUser
+        return $this->hasMany('App/Models/Operational/Appointment', 'consultation_id');
+    }
 }

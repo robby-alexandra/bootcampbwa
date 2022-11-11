@@ -36,4 +36,10 @@ class Transaction extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+    public function appointment()
+    {
+        // link lokasi/path , pilih FK'a dan pilih primary key
+        // relasi dengan App/Models/ManagementAccess/DetailUser
+        return $this->belongsTo('App/Models/Operational/Appointment', 'appointment_id', 'id');
+    }
 }
