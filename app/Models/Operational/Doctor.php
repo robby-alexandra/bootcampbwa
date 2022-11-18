@@ -38,10 +38,10 @@ class Doctor extends Model
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->belongsTo('App/Models/MasterData/Specialist', 'specialist_id', 'id');
+        return $this->belongsTo('App\Models\MasterData\Specialist', 'specialist_id', 'id');
     }
     public function appointment()
     {
-        return $this->hasMany('App/Models/Operational/Appointment', 'doctor_id');
+        return $this->hasMany('App\Models\Operational\Appointment', 'doctor_id');
     }
 }

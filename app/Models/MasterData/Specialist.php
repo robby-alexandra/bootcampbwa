@@ -37,6 +37,6 @@ class Specialist extends Model
         // doctor a/ untuk nama model doctor
         // link lokasi , dan pilih FK'a
         // kemudian open model relasinya untuk menambahkan belongsTo
-        return $this->hasMany('App/Models/Operational/Doctor', 'specialist_id');
+        return $this->hasMany('App\Models\Operational\Doctor', 'specialist_id');
     }
 }

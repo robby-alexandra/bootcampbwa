@@ -31,4 +31,13 @@ class PermissionRole extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function permission()
+    {
+        return $this->belongsTo('App\Models\ManagemenetAccess\Permission', 'Permission_id', 'id');
+    }
+    public function role()
+    {
+        return $this->belongsTo('App\Models\ManagementAccess\Role', 'role_id', 'id');
+    }
 }

@@ -77,14 +77,14 @@ class User extends Authenticatable
 
     public function appointment()
     {
-        return $this->hasMany('App/Models/Operational/Appointment', 'user_id');
+        return $this->hasMany('App\Models\Operational\Appointment', 'user_id');
     }
     public function detail_user()
     {
-        return $this->hasOne('App/Models/ManagementAccess/DetailUser', 'user_id');
+        return $this->hasOne('App\Models\ManagementAccess\DetailUser', 'user_id');
     }
     public function role_user()
     {
-        return $this->hasMany('App/Models/ManagementAccess/RoleUser', 'user_id');
+        return $this->hasMany('App\Models\ManagementAccess\RoleUser', 'user_id');
     }
 }

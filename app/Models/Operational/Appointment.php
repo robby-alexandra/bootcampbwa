@@ -40,23 +40,23 @@ class Appointment extends Model
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->belongsTo('App/Models/Operational/Doctor', 'doctor_id', 'id');
+        return $this->belongsTo('App\Models\Operational\Doctor', 'doctor_id', 'id');
     }
     public function user()
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->belongsTo('App/Models/User', 'user_id', 'id');
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 
     public function transaction()
     {
-        return $this->hasOne('App/Models/Operational/Transaction', 'appointment_id');
+        return $this->hasOne('App\Models\Operational\Transaction', 'appointment_id');
     }
     public function consultation()
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->belongsTo('App/Models/MasterData/Consultation', 'consultation_id', 'id');
+        return $this->belongsTo('App\Models\MasterData\Consultation', 'consultation_id', 'id');
     }
 }

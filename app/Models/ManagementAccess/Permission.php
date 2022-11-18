@@ -30,4 +30,11 @@ class Permission extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+    public function permission_pole()
+    {
+        // permission_pole a/ databasenya tujuan one to many'a databasenya
+        // link lokasi , dan pilih FK'a
+        // kemudian open model relasinya untuk menambahkan belongsTo
+        return $this->hasMany('App\Models\ManagementAccess\PermissionRole', 'permission_id');
+    }
 }

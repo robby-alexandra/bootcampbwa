@@ -30,4 +30,13 @@ class Role extends Model
         'deleted_at'
     ];
     // End Protect Tanggal
+
+    public function role_user()
+    {
+        return $this->hasMany('App\Models\ManagementAccess\RoleUser', 'role_id');
+    }
+    public function permission_role()
+    {
+        return $this->hasMany('App\Models\ManagementAccess\PermissionRole', 'role_id');
+    }
 }

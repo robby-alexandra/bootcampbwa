@@ -35,6 +35,6 @@ class Consultation extends Model
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->hasMany('App/Models/Operational/Appointment', 'consultation_id');
+        return $this->hasMany('App\Models\Operational\Appointment', 'consultation_id');
     }
 }

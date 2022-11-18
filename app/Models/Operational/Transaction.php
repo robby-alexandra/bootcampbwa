@@ -40,6 +40,6 @@ class Transaction extends Model
     {
         // link lokasi/path , pilih FK'a dan pilih primary key
         // relasi dengan App/Models/ManagementAccess/DetailUser
-        return $this->belongsTo('App/Models/Operational/Appointment', 'appointment_id', 'id');
+        return $this->belongsTo('App\Models\Operational\Appointment', 'appointment_id', 'id');
     }
 }
