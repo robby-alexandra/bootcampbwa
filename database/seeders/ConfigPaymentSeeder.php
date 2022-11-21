@@ -16,7 +16,7 @@ class ConfigPaymentSeeder extends Seeder
      */
     public function run()
     {
-        // create data here
+        //
         $config_payment = [
             [
                 'fee' => '150000',
@@ -25,7 +25,6 @@ class ConfigPaymentSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
         ];
-        // this array $config_payment will be insert to table 'config_payment'
         ConfigPayment::insert($config_payment);
     }
 }
